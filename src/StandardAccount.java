@@ -6,8 +6,9 @@ public class StandardAccount implements IAccount{
 
     public StandardAccount(int accountNumber,double creditLimit) {
         this.accountNumber = accountNumber;
-        this.creditLimit = creditLimit;
         this.balance = 0.0;
+
+        this.creditLimit = creditLimit < 0 ? creditLimit : 0;
     }
 
     @Override
